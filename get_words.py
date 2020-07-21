@@ -2,9 +2,8 @@
 import json
 
 def word_to_dict_key(word):
-    """Convert work to it's stored form"""
+    """Convert word to it's stored form"""
     return "".join(sorted(word))
-
 
 
 def search_permutations(word, nodes):
@@ -18,6 +17,8 @@ def search_permutations(word, nodes):
 
 def get_new_words(word, nodes):
     """Get words that can be played with one additional letter - return as JSON"""
+    
+    print(word)
     alphabet = 'abdefghijklmnopqrstuvwxyz'
     words = search_permutations(word, nodes)
     # Print word and permutations
